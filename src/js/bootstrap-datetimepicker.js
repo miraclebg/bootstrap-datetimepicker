@@ -140,7 +140,7 @@
                     timeZoneIndicator,
                     dateWithTimeZoneInfo;
 
-                if (moment.tz !== undefined && options.timeZone !== undefined && options.timeZone !== null && options.timeZone !== '') {
+                if (moment.tz !== undefined && options.timeZoneSupport && options.timeZone !== undefined && options.timeZone !== null && options.timeZone !== '') {
                     tzEnabled = true;
                 }
                 if (d === undefined || d === null) {
@@ -2367,6 +2367,7 @@
     };
 
     $.fn.datetimepicker.defaults = {
+    	timeZoneSupport: false,
         timeZone: 'Etc/UTC',
         format: false,
         dayViewHeaderFormat: 'MMMM YYYY',
