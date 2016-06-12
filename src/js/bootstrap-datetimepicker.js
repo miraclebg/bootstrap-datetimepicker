@@ -1523,6 +1523,16 @@
             return picker;
         };
 
+        picker.timeZoneSupport = function(timezoneSupport) {
+            if (arguments.length === 0) {
+                return options.timeZoneSupport;
+            }
+
+            options.timeZoneSupport = timezoneSupport;
+
+            return picker;
+        };
+
         picker.timeZone = function (newZone) {
             if (arguments.length === 0) {
                 return options.timeZone;
@@ -2367,7 +2377,7 @@
     };
 
     $.fn.datetimepicker.defaults = {
-    	timeZoneSupport: false,
+        timeZoneSupport: false,
         timeZone: 'Etc/UTC',
         format: false,
         dayViewHeaderFormat: 'MMMM YYYY',
